@@ -141,7 +141,7 @@ gdjs.PauseCode.condition0IsTrue_0.val = gdjs.evtTools.input.wasKeyReleased(runti
 }if ( gdjs.PauseCode.condition0IsTrue_0.val ) {
 {
 {gdjs.PauseCode.conditionTrue_1 = gdjs.PauseCode.condition1IsTrue_0;
-gdjs.PauseCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17659260);
+gdjs.PauseCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17659292);
 }
 }}
 if (gdjs.PauseCode.condition1IsTrue_0.val) {

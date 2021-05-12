@@ -601,6 +601,8 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = false;
 {
 gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeScene.sceneJustBegins(runtimeScene);
 }if (gdjs.EndlessModeGameCode.condition0IsTrue_0.val) {
+gdjs.copyArray(runtimeScene.getObjects("EnemiesKilledText"), gdjs.EndlessModeGameCode.GDEnemiesKilledTextObjects2);
+gdjs.copyArray(runtimeScene.getObjects("EnemiesKilledValue"), gdjs.EndlessModeGameCode.GDEnemiesKilledValueObjects2);
 gdjs.copyArray(runtimeScene.getObjects("GameOver"), gdjs.EndlessModeGameCode.GDGameOverObjects2);
 gdjs.copyArray(runtimeScene.getObjects("InfiniteAmmo"), gdjs.EndlessModeGameCode.GDInfiniteAmmoObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Invincibility"), gdjs.EndlessModeGameCode.GDInvincibilityObjects2);
@@ -615,6 +617,8 @@ gdjs.copyArray(runtimeScene.getObjects("PassedEnemiesCounterTextLvl2"), gdjs.End
 gdjs.copyArray(runtimeScene.getObjects("PassedEnemiesCounterTextLvl3"), gdjs.EndlessModeGameCode.GDPassedEnemiesCounterTextLvl3Objects2);
 gdjs.copyArray(runtimeScene.getObjects("PassedEnemiesCounterTextLvl4"), gdjs.EndlessModeGameCode.GDPassedEnemiesCounterTextLvl4Objects2);
 gdjs.copyArray(runtimeScene.getObjects("PassedEnemiesCounterTextLvl5"), gdjs.EndlessModeGameCode.GDPassedEnemiesCounterTextLvl5Objects2);
+gdjs.copyArray(runtimeScene.getObjects("PlayerScoreText"), gdjs.EndlessModeGameCode.GDPlayerScoreTextObjects2);
+gdjs.copyArray(runtimeScene.getObjects("PlayerScoreValue"), gdjs.EndlessModeGameCode.GDPlayerScoreValueObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Quit"), gdjs.EndlessModeGameCode.GDQuitObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Resume"), gdjs.EndlessModeGameCode.GDResumeObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Statistics"), gdjs.EndlessModeGameCode.GDStatisticsObjects2);
@@ -635,6 +639,8 @@ gdjs.copyArray(runtimeScene.getObjects("Statistics7Text"), gdjs.EndlessModeGameC
 gdjs.copyArray(runtimeScene.getObjects("Statistics8"), gdjs.EndlessModeGameCode.GDStatistics8Objects2);
 gdjs.copyArray(runtimeScene.getObjects("Statistics8Text"), gdjs.EndlessModeGameCode.GDStatistics8TextObjects2);
 gdjs.copyArray(runtimeScene.getObjects("Statistics8Text1"), gdjs.EndlessModeGameCode.GDStatistics8Text1Objects2);
+gdjs.copyArray(runtimeScene.getObjects("TimePlayedText"), gdjs.EndlessModeGameCode.GDTimePlayedTextObjects2);
+gdjs.copyArray(runtimeScene.getObjects("TimePlayedValue"), gdjs.EndlessModeGameCode.GDTimePlayedValueObjects2);
 gdjs.EndlessModeGameCode.GDPlayerObjects2.length = 0;
 
 {gdjs.evtTools.object.createObjectOnScene((typeof eventsFunctionContext !== 'undefined' ? eventsFunctionContext : runtimeScene), gdjs.EndlessModeGameCode.mapOfGDgdjs_46EndlessModeGameCode_46GDPlayerObjects2Objects, 100, 290, "");
@@ -768,6 +774,24 @@ gdjs.EndlessModeGameCode.GDPlayerObjects2.length = 0;
 }{gdjs.evtTools.runtimeScene.resetTimer(runtimeScene, "ShieldTimer");
 }{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "mixkit-infected-vibes-157.mp3", 0, true, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(4)), 1);
 }{gdjs.evtTools.sound.pauseMusicOnChannel(runtimeScene, 1);
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDEnemiesKilledValueObjects2.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDEnemiesKilledValueObjects2[i].hide();
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDEnemiesKilledTextObjects2.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDEnemiesKilledTextObjects2[i].hide();
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDTimePlayedValueObjects2.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDTimePlayedValueObjects2[i].hide();
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDTimePlayedTextObjects2.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDTimePlayedTextObjects2[i].hide();
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDPlayerScoreValueObjects2.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDPlayerScoreValueObjects2[i].hide();
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDPlayerScoreTextObjects2.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDPlayerScoreTextObjects2[i].hide();
+}
 }}
 
 }
@@ -1217,7 +1241,7 @@ gdjs.EndlessModeGameCode.eventsList24(runtimeScene);
 gdjs.EndlessModeGameCode.condition0IsTrue_0.val = false;
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition0IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17073420);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17073452);
 }
 }if (gdjs.EndlessModeGameCode.condition0IsTrue_0.val) {
 gdjs.copyArray(runtimeScene.getObjects("Player"), gdjs.EndlessModeGameCode.GDPlayerObjects4);
@@ -1311,7 +1335,7 @@ for(var i = 0, k = 0, l = gdjs.EndlessModeGameCode.GDPlayerObjects2.length;i<l;+
 gdjs.EndlessModeGameCode.GDPlayerObjects2.length = k;}if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17091948);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17091980);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -1363,7 +1387,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariab
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17067700);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17067732);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -2002,7 +2026,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariab
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17096148);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17096180);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -2135,7 +2159,7 @@ for(var i = 0, k = 0, l = gdjs.EndlessModeGameCode.GDPlayerObjects2.length;i<l;+
 gdjs.EndlessModeGameCode.GDPlayerObjects2.length = k;}if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17121508);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17121540);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -2809,7 +2833,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariab
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17125892);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17125924);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -2946,7 +2970,7 @@ for(var i = 0, k = 0, l = gdjs.EndlessModeGameCode.GDPlayerObjects2.length;i<l;+
 gdjs.EndlessModeGameCode.GDPlayerObjects2.length = k;}if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17154036);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17154068);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -3726,7 +3750,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariab
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17158612);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17158644);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -3867,7 +3891,7 @@ for(var i = 0, k = 0, l = gdjs.EndlessModeGameCode.GDPlayerObjects2.length;i<l;+
 gdjs.EndlessModeGameCode.GDPlayerObjects2.length = k;}if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17191244);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17191276);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -4226,7 +4250,7 @@ gdjs.EndlessModeGameCode.eventsList147(runtimeScene);
 gdjs.EndlessModeGameCode.condition0IsTrue_0.val = false;
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition0IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17214532);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17214564);
 }
 }if (gdjs.EndlessModeGameCode.condition0IsTrue_0.val) {
 gdjs.EndlessModeGameCode.GDFinalBossObjects4.length = 0;
@@ -4274,7 +4298,7 @@ for(var i = 0, k = 0, l = gdjs.EndlessModeGameCode.GDFinalBossObjects4.length;i<
 gdjs.EndlessModeGameCode.GDFinalBossObjects4.length = k;}if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17217076);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17217108);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -4321,7 +4345,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17215932);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17215964);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -4838,7 +4862,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariab
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17196132);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17196164);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -5084,7 +5108,7 @@ gdjs.EndlessModeGameCode.condition3IsTrue_0.val = gdjs.evtTools.common.getVariab
 }if ( gdjs.EndlessModeGameCode.condition3IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition4IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17237116);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17237148);
 }
 }}
 }
@@ -5129,7 +5153,7 @@ gdjs.EndlessModeGameCode.condition2IsTrue_0.val = gdjs.evtTools.runtimeScene.tim
 }if ( gdjs.EndlessModeGameCode.condition2IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition3IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17238860);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17238892);
 }
 }}
 }
@@ -5228,7 +5252,7 @@ gdjs.EndlessModeGameCode.condition2IsTrue_0.val = gdjs.evtTools.common.getVariab
 }if ( gdjs.EndlessModeGameCode.condition2IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition3IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17244796);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17244828);
 }
 }if ( gdjs.EndlessModeGameCode.condition3IsTrue_0.val ) {
 {
@@ -5318,7 +5342,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17246524);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17246556);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -5474,7 +5498,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17253340);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17253372);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -5630,7 +5654,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17261420);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17261452);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -5724,7 +5748,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17265372);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17265404);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -5789,7 +5813,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17269348);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17269380);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -5854,7 +5878,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17271300);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17271332);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -6107,7 +6131,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17275572);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17275604);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -6281,7 +6305,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17282660);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17282692);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -6455,7 +6479,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17290796);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17290828);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -6632,7 +6656,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17298004);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17298036);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -6769,7 +6793,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17304332);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17304364);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -6937,7 +6961,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17309940);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17309972);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -7111,7 +7135,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17316828);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17316860);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -7442,10 +7466,12 @@ for(var i = 0, k = 0, l = gdjs.EndlessModeGameCode.GDPlayerObjects1.length;i<l;+
 gdjs.EndlessModeGameCode.GDPlayerObjects1.length = k;}if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17331636);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17331668);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
+gdjs.copyArray(runtimeScene.getObjects("EnemiesKilledText"), gdjs.EndlessModeGameCode.GDEnemiesKilledTextObjects1);
+gdjs.copyArray(runtimeScene.getObjects("EnemiesKilledValue"), gdjs.EndlessModeGameCode.GDEnemiesKilledValueObjects1);
 gdjs.copyArray(runtimeScene.getObjects("GameOver"), gdjs.EndlessModeGameCode.GDGameOverObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Heart"), gdjs.EndlessModeGameCode.GDHeartObjects1);
 gdjs.copyArray(runtimeScene.getObjects("InfiniteAmmo"), gdjs.EndlessModeGameCode.GDInfiniteAmmoObjects1);
@@ -7460,8 +7486,12 @@ gdjs.copyArray(runtimeScene.getObjects("PassedEnemiesCounterTextLvl3"), gdjs.End
 gdjs.copyArray(runtimeScene.getObjects("PassedEnemiesCounterTextLvl4"), gdjs.EndlessModeGameCode.GDPassedEnemiesCounterTextLvl4Objects1);
 gdjs.copyArray(runtimeScene.getObjects("PassedEnemiesCounterTextLvl5"), gdjs.EndlessModeGameCode.GDPassedEnemiesCounterTextLvl5Objects1);
 /* Reuse gdjs.EndlessModeGameCode.GDPlayerObjects1 */
+gdjs.copyArray(runtimeScene.getObjects("PlayerScoreText"), gdjs.EndlessModeGameCode.GDPlayerScoreTextObjects1);
+gdjs.copyArray(runtimeScene.getObjects("PlayerScoreValue"), gdjs.EndlessModeGameCode.GDPlayerScoreValueObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Quit"), gdjs.EndlessModeGameCode.GDQuitObjects1);
 gdjs.copyArray(runtimeScene.getObjects("Resume"), gdjs.EndlessModeGameCode.GDResumeObjects1);
+gdjs.copyArray(runtimeScene.getObjects("TimePlayedText"), gdjs.EndlessModeGameCode.GDTimePlayedTextObjects1);
+gdjs.copyArray(runtimeScene.getObjects("TimePlayedValue"), gdjs.EndlessModeGameCode.GDTimePlayedValueObjects1);
 gdjs.EndlessModeGameCode.GDBlackSmokeObjects1.length = 0;
 
 gdjs.EndlessModeGameCode.GDExplosionObjects1.length = 0;
@@ -7525,6 +7555,33 @@ gdjs.EndlessModeGameCode.GDExplosionObjects1.length = 0;
 }{runtimeScene.getGame().getVariables().getFromIndex(0).setNumber(gdjs.evtTools.common.toNumber((gdjs.RuntimeObject.getVariableString(((gdjs.EndlessModeGameCode.GDPlayerObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.EndlessModeGameCode.GDPlayerObjects1[0].getVariables()).getFromIndex(1)))));
 }{runtimeScene.getGame().getVariables().getFromIndex(2).setNumber(gdjs.evtTools.common.toNumber((gdjs.RuntimeObject.getVariableString(((gdjs.EndlessModeGameCode.GDPlayerObjects1.length === 0 ) ? gdjs.VariablesContainer.badVariablesContainer : gdjs.EndlessModeGameCode.GDPlayerObjects1[0].getVariables()).getFromIndex(5)))));
 }{gdjs.evtTools.sound.playMusicOnChannel(runtimeScene, "The Fallen MP3.mp3", 0, true, gdjs.evtTools.common.getVariableNumber(runtimeScene.getGame().getVariables().getFromIndex(4)), 1);
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDPlayerScoreTextObjects1.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDPlayerScoreTextObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDEnemiesKilledValueObjects1.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDEnemiesKilledValueObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDTimePlayedTextObjects1.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDTimePlayedTextObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDTimePlayedValueObjects1.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDTimePlayedValueObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDEnemiesKilledTextObjects1.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDEnemiesKilledTextObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDPlayerScoreValueObjects1.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDPlayerScoreValueObjects1[i].hide(false);
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDEnemiesKilledValueObjects1.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDEnemiesKilledValueObjects1[i].setString(gdjs.evtTools.common.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(2)));
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDTimePlayedValueObjects1.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDTimePlayedValueObjects1[i].setString(gdjs.evtTools.common.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(1)));
+}
+}{for(var i = 0, len = gdjs.EndlessModeGameCode.GDPlayerScoreValueObjects1.length ;i < len;++i) {
+    gdjs.EndlessModeGameCode.GDPlayerScoreValueObjects1[i].setString(gdjs.evtTools.common.getVariableString(runtimeScene.getGame().getVariables().getFromIndex(0)));
+}
 }}
 
 }
@@ -8401,7 +8458,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPress
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17365940);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17365972);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -8429,7 +8486,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPress
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17368804);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17368836);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -8487,7 +8544,7 @@ for(var i = 0, k = 0, l = gdjs.EndlessModeGameCode.GDPlayerObjects2.length;i<l;+
 gdjs.EndlessModeGameCode.GDPlayerObjects2.length = k;}if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17370660);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17370692);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -8513,7 +8570,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPress
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17372188);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17372220);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -8545,7 +8602,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPress
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17373788);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17373820);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -8577,7 +8634,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPress
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17375420);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17375452);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -8609,7 +8666,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPress
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17377092);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17377124);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -8641,7 +8698,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPress
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17378660);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17378692);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -8698,7 +8755,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariab
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17382804);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17382836);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -8803,7 +8860,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.common.getVariab
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17387492);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17387524);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -8953,7 +9010,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.input.isKeyPress
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17382188);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17382220);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -9029,7 +9086,7 @@ gdjs.EndlessModeGameCode.condition1IsTrue_0.val = gdjs.evtTools.input.wasKeyRele
 }if ( gdjs.EndlessModeGameCode.condition1IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition2IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17394700);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17394732);
 }
 }}
 }
@@ -9154,7 +9211,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17401420);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17401452);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -9180,7 +9237,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17402540);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17402572);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -9206,7 +9263,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17402388);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17402420);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {
@@ -9232,7 +9289,7 @@ gdjs.EndlessModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.object.hitBoxesC
 }if ( gdjs.EndlessModeGameCode.condition0IsTrue_0.val ) {
 {
 {gdjs.EndlessModeGameCode.conditionTrue_1 = gdjs.EndlessModeGameCode.condition1IsTrue_0;
-gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17403316);
+gdjs.EndlessModeGameCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17403348);
 }
 }}
 if (gdjs.EndlessModeGameCode.condition1IsTrue_0.val) {

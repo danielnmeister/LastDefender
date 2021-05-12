@@ -192,7 +192,7 @@ gdjs.copyArray(runtimeScene.getObjects("Victory"), gdjs.VictoryScreenCode.GDVict
 gdjs.VictoryScreenCode.condition0IsTrue_0.val = false;
 {
 {gdjs.VictoryScreenCode.conditionTrue_1 = gdjs.VictoryScreenCode.condition0IsTrue_0;
-gdjs.VictoryScreenCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17677084);
+gdjs.VictoryScreenCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17677116);
 }
 }if (gdjs.VictoryScreenCode.condition0IsTrue_0.val) {
 {gdjs.evtTools.sound.playSoundOnChannel(runtimeScene, "fireworks_zYtx5xY.mp3", 3, false, 100, 1);

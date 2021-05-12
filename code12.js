@@ -416,7 +416,7 @@ gdjs.PassedShipDefeatScreenCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeSc
 }if ( gdjs.PassedShipDefeatScreenCode.condition0IsTrue_0.val ) {
 {
 {gdjs.PassedShipDefeatScreenCode.conditionTrue_1 = gdjs.PassedShipDefeatScreenCode.condition1IsTrue_0;
-gdjs.PassedShipDefeatScreenCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17741044);
+gdjs.PassedShipDefeatScreenCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17741076);
 }
 }}
 if (gdjs.PassedShipDefeatScreenCode.condition1IsTrue_0.val) {
@@ -440,7 +440,7 @@ gdjs.PassedShipDefeatScreenCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeSc
 }if ( gdjs.PassedShipDefeatScreenCode.condition0IsTrue_0.val ) {
 {
 {gdjs.PassedShipDefeatScreenCode.conditionTrue_1 = gdjs.PassedShipDefeatScreenCode.condition1IsTrue_0;
-gdjs.PassedShipDefeatScreenCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17742236);
+gdjs.PassedShipDefeatScreenCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17742268);
 }
 }}
 if (gdjs.PassedShipDefeatScreenCode.condition1IsTrue_0.val) {
@@ -496,7 +496,7 @@ gdjs.PassedShipDefeatScreenCode.condition0IsTrue_0.val = gdjs.evtTools.runtimeSc
 }if ( gdjs.PassedShipDefeatScreenCode.condition0IsTrue_0.val ) {
 {
 {gdjs.PassedShipDefeatScreenCode.conditionTrue_1 = gdjs.PassedShipDefeatScreenCode.condition1IsTrue_0;
-gdjs.PassedShipDefeatScreenCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17744644);
+gdjs.PassedShipDefeatScreenCode.conditionTrue_1.val = runtimeScene.getOnceTriggers().triggerOnce(17744676);
 }
 }}
 if (gdjs.PassedShipDefeatScreenCode.condition1IsTrue_0.val) {
