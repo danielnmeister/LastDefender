@@ -97,7 +97,7 @@ gdjs.copyArray(runtimeScene.getObjects("StartButton"), gdjs.StoryModeCode.GDStar
 gdjs.StoryModeCode.condition0IsTrue_0.val = false;
 gdjs.StoryModeCode.condition1IsTrue_0.val = false;
 {
-gdjs.StoryModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
+gdjs.StoryModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }if ( gdjs.StoryModeCode.condition0IsTrue_0.val ) {
 {
 gdjs.StoryModeCode.condition1IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.StoryModeCode.mapOfGDgdjs_46StoryModeCode_46GDStartButtonObjects2Objects, runtimeScene, true, false);
@@ -116,7 +116,7 @@ gdjs.copyArray(runtimeScene.getObjects("EnemiesScreen"), gdjs.StoryModeCode.GDEn
 gdjs.StoryModeCode.condition0IsTrue_0.val = false;
 gdjs.StoryModeCode.condition1IsTrue_0.val = false;
 {
-gdjs.StoryModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
+gdjs.StoryModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }if ( gdjs.StoryModeCode.condition0IsTrue_0.val ) {
 {
 gdjs.StoryModeCode.condition1IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.StoryModeCode.mapOfGDgdjs_46StoryModeCode_46GDEnemiesScreenObjects2Objects, runtimeScene, true, false);
@@ -135,7 +135,7 @@ gdjs.copyArray(runtimeScene.getObjects("Quit"), gdjs.StoryModeCode.GDQuitObjects
 gdjs.StoryModeCode.condition0IsTrue_0.val = false;
 gdjs.StoryModeCode.condition1IsTrue_0.val = false;
 {
-gdjs.StoryModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
+gdjs.StoryModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }if ( gdjs.StoryModeCode.condition0IsTrue_0.val ) {
 {
 gdjs.StoryModeCode.condition1IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.StoryModeCode.mapOfGDgdjs_46StoryModeCode_46GDQuitObjects1Objects, runtimeScene, true, false);

@@ -100,7 +100,7 @@ gdjs.copyArray(runtimeScene.getObjects("ViewEnemiesText"), gdjs.EndlessModeCode.
 gdjs.EndlessModeCode.condition0IsTrue_0.val = false;
 gdjs.EndlessModeCode.condition1IsTrue_0.val = false;
 {
-gdjs.EndlessModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
+gdjs.EndlessModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }if ( gdjs.EndlessModeCode.condition0IsTrue_0.val ) {
 {
 gdjs.EndlessModeCode.condition1IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.EndlessModeCode.mapOfGDgdjs_46EndlessModeCode_46GDViewEnemiesTextObjects2Objects, runtimeScene, true, false);
@@ -119,7 +119,7 @@ gdjs.copyArray(runtimeScene.getObjects("StartButton"), gdjs.EndlessModeCode.GDSt
 gdjs.EndlessModeCode.condition0IsTrue_0.val = false;
 gdjs.EndlessModeCode.condition1IsTrue_0.val = false;
 {
-gdjs.EndlessModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
+gdjs.EndlessModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }if ( gdjs.EndlessModeCode.condition0IsTrue_0.val ) {
 {
 gdjs.EndlessModeCode.condition1IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.EndlessModeCode.mapOfGDgdjs_46EndlessModeCode_46GDStartButtonObjects2Objects, runtimeScene, true, false);
@@ -138,7 +138,7 @@ gdjs.copyArray(runtimeScene.getObjects("Quit"), gdjs.EndlessModeCode.GDQuitObjec
 gdjs.EndlessModeCode.condition0IsTrue_0.val = false;
 gdjs.EndlessModeCode.condition1IsTrue_0.val = false;
 {
-gdjs.EndlessModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonPressed(runtimeScene, "Left");
+gdjs.EndlessModeCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }if ( gdjs.EndlessModeCode.condition0IsTrue_0.val ) {
 {
 gdjs.EndlessModeCode.condition1IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.EndlessModeCode.mapOfGDgdjs_46EndlessModeCode_46GDQuitObjects1Objects, runtimeScene, true, false);

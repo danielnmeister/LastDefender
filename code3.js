@@ -9172,13 +9172,24 @@ gdjs.copyArray(runtimeScene.getObjects("Resume"), gdjs.StoryModeGameCode.GDResum
 
 gdjs.StoryModeGameCode.condition0IsTrue_0.val = false;
 gdjs.StoryModeGameCode.condition1IsTrue_0.val = false;
+gdjs.StoryModeGameCode.condition2IsTrue_0.val = false;
 {
 gdjs.StoryModeGameCode.condition0IsTrue_0.val = gdjs.evtTools.input.isMouseButtonReleased(runtimeScene, "Left");
 }if ( gdjs.StoryModeGameCode.condition0IsTrue_0.val ) {
 {
 gdjs.StoryModeGameCode.condition1IsTrue_0.val = gdjs.evtTools.input.cursorOnObject(gdjs.StoryModeGameCode.mapOfGDgdjs_46StoryModeGameCode_46GDResumeObjects2Objects, runtimeScene, true, false);
-}}
-if (gdjs.StoryModeGameCode.condition1IsTrue_0.val) {
+}if ( gdjs.StoryModeGameCode.condition1IsTrue_0.val ) {
+{
+for(var i = 0, k = 0, l = gdjs.StoryModeGameCode.GDResumeObjects2.length;i<l;++i) {
+    if ( gdjs.StoryModeGameCode.GDResumeObjects2[i].isVisible() ) {
+        gdjs.StoryModeGameCode.condition2IsTrue_0.val = true;
+        gdjs.StoryModeGameCode.GDResumeObjects2[k] = gdjs.StoryModeGameCode.GDResumeObjects2[i];
+        ++k;
+    }
+}
+gdjs.StoryModeGameCode.GDResumeObjects2.length = k;}}
+}
+if (gdjs.StoryModeGameCode.condition2IsTrue_0.val) {
 {gdjs.evtTools.runtimeScene.replaceScene(runtimeScene, "Menu", false);
 }}
 
